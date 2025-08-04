@@ -1,0 +1,29 @@
+{
+  "name": "sistemas-pozo-agua-juan-montalvo",
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/manifest.json",
+      "headers": {
+        "Content-Type": "application/manifest+json"
+      }
+    }
+  ],
+  "headers": [
+    {
+      "source": "/manifest.json",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/manifest+json"
+        }
+      ]
+    }
+  ]
+}
